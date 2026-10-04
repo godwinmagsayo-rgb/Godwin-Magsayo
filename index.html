@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Happy 21st, Ronabel 💗</title>
+<link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>/* ===== Ronabel's 21st — styles ===== */
+:root{--hot:#FF69B4;--rose:#FF85C1;--baby:#FFB6D9;--pink:#FFC0CB;--blush:#FFE4EF;--milk:#FFF0F6;--plum:#8a2b66;--purple:#c77dff}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{font-family:'Quicksand',sans-serif;color:var(--plum);background:linear-gradient(160deg,var(--milk),var(--blush) 40%,var(--baby));background-attachment:fixed;overflow-x:hidden}
+.script{font-family:'Pacifico',cursive;font-weight:400;line-height:1.3;background:linear-gradient(90deg,var(--hot),var(--purple));-webkit-background-clip:text;background-clip:text;color:transparent}
+.hidden{display:none}
+.screen{min-height:100vh;min-height:100svh;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1.4rem;padding:3rem 1.2rem;text-align:center;position:relative;z-index:1}
+h1.script{font-size:clamp(1.8rem,7vw,3.2rem)}
+.big{font-size:clamp(2rem,8vw,3.6rem);min-height:1.3em}
+.small,.line{font-size:1.1rem;max-width:30rem}
+.line{font-size:1.25rem;font-weight:600}
+.sign{margin-top:1rem;font-weight:700;color:var(--hot)}
+
+/* buttons */
+.btn{font:700 1.05rem 'Quicksand';color:#fff;border:0;padding:.95rem 1.8rem;border-radius:999px;cursor:pointer;background:linear-gradient(135deg,var(--hot),var(--purple));box-shadow:0 8px 24px rgba(255,105,180,.45);transition:transform .2s,box-shadow .2s;animation:pulse 2.4s infinite}
+.btn:hover{transform:translateY(-3px) scale(1.04)}
+.btn:active{transform:scale(.96)}
+.btn.ghost{background:#fff;color:var(--hot);box-shadow:0 6px 18px rgba(255,105,180,.3);animation:none}
+@keyframes pulse{50%{box-shadow:0 8px 34px rgba(255,105,180,.8)}}
+
+/* gift box */
+.giftbox{position:relative;width:150px;height:150px;background:none;border:0;cursor:pointer;animation:bob 2.2s ease-in-out infinite}
+.giftbox .box{position:absolute;bottom:0;left:10px;width:130px;height:90px;border-radius:10px;background:linear-gradient(var(--rose),var(--hot));box-shadow:0 12px 24px rgba(255,105,180,.4)}
+.giftbox .lid{position:absolute;top:28px;left:0;width:150px;height:34px;border-radius:10px;background:var(--hot);z-index:2;transition:transform .6s cubic-bezier(.3,1.6,.5,1)}
+.giftbox .ribbon{position:absolute;bottom:0;left:65px;width:20px;height:122px;background:#fff;opacity:.9;z-index:3;border-radius:4px}
+.giftbox .lid::after{content:"🎀";position:absolute;top:-30px;left:55px;font-size:2.3rem}
+.giftbox.open .lid{transform:translateY(-70px) rotate(-18deg)}
+.giftbox.open{animation:shake .5s}
+@keyframes bob{50%{transform:translateY(-10px)}}
+@keyframes shake{25%{transform:rotate(-6deg)}75%{transform:rotate(6deg)}}
+
+/* 21 + cake */
+.num21{font:400 clamp(6rem,28vw,10rem)/1 'Pacifico';color:#fff;text-shadow:0 0 12px var(--hot),0 0 32px var(--rose),0 0 60px var(--purple);animation:glow 2.5s ease-in-out infinite}
+@keyframes glow{50%{text-shadow:0 0 20px var(--hot),0 0 50px var(--rose),0 0 90px var(--purple);transform:scale(1.04)}}
+.cake{position:relative;width:min(300px,85vw);height:190px}
+.cake .tier{position:absolute;left:50%;transform:translateX(-50%);border-radius:14px 14px 6px 6px;background:linear-gradient(#fff 22%,var(--baby) 22%)}
+.t1{bottom:20px;width:100%;height:80px}.t2{bottom:100px;width:72%;height:60px}
+.plate{position:absolute;bottom:0;left:0;width:100%;height:20px;border-radius:50%;background:#fff;box-shadow:0 6px 14px rgba(255,105,180,.3)}
+.candles{position:absolute;bottom:158px;left:50%;transform:translateX(-50%);width:68%;display:flex;flex-wrap:wrap;justify-content:center;gap:2px 5px;z-index:2}
+.candle{width:6px;height:20px;border-radius:2px;background:linear-gradient(#fff,var(--rose));position:relative}
+.candle::before{content:"";position:absolute;top:-10px;left:-1px;width:8px;height:11px;border-radius:50% 50% 50% 50%/65% 65% 35% 35%;background:radial-gradient(#fff,#ffd54f);box-shadow:0 0 10px 3px rgba(255,200,80,.8);animation:flick .4s alternate infinite}
+@keyframes flick{to{transform:scale(1.15,.9);opacity:.85}}
+
+/* cards */
+.card{max-width:640px;width:100%;padding:2rem 1.4rem;border-radius:28px}
+.glass{background:rgba(255,255,255,.55);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid rgba(255,255,255,.8);box-shadow:0 20px 50px rgba(255,105,180,.25)}
+.msg{text-align:left}.msg h3{font-size:1.7rem;text-align:center;margin-bottom:1rem}
+.msg p{font-size:1.05rem;line-height:1.8;font-weight:500}
+.center{display:flex;flex-direction:column;align-items:center;gap:1.2rem}
+.pop-text{opacity:0;transform:scale(.6);font-weight:700;font-size:1.2rem;transition:.5s cubic-bezier(.3,1.6,.5,1)}
+.pop-text.show{opacity:1;transform:scale(1)}
+.popup{display:none;background:#fff;border-radius:22px;padding:1.4rem;box-shadow:0 10px 30px rgba(199,125,255,.35)}
+.popup.show{display:block;animation:popin .6s cubic-bezier(.3,1.6,.5,1)}
+.popup p{font-size:1.2rem;margin:.3rem 0}
+@keyframes popin{from{opacity:0;transform:scale(.3) rotate(-6deg)}}
+.final{background:linear-gradient(var(--blush),var(--pink));}
+
+/* floating hearts / sparkles */
+#hearts{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:0}
+.fl{position:absolute;bottom:-40px;animation:rise linear forwards;opacity:.7}
+@keyframes rise{to{transform:translateY(-110vh) rotate(25deg);opacity:0}}
+.burst{position:fixed;pointer-events:none;z-index:99;animation:burst .8s ease-out forwards}
+@keyframes burst{to{transform:translate(var(--x),var(--y)) scale(.3);opacity:0}}
+
+/* fade-in when scrolled to */
+.fade{opacity:0;transform:translateY(24px);transition:.9s}
+.fade.in{opacity:1;transform:none}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}}
+
+:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+</style>
+</head>
+<body>
+<div id="hearts" aria-hidden="true"></div>
+
+
+<!-- SECTION 1: INTRO -->
+<section id="intro" class="screen">
+  <p class="small">✨ Someone prepared a little surprise for you... ✨</p>
+  <h1 class="script">Happy 21st Birthday, Ronabel! 💗</h1>
+  <button id="gift" class="giftbox" aria-label="Open gift">
+    <span class="lid"></span><span class="box"></span><span class="ribbon"></span>
+  </button>
+  <button id="openBtn" class="btn">Open Your Gift 🎁</button>
+</section>
+
+<main id="main" class="hidden">
+  <!-- SECTION 2: REVEAL -->
+  <section class="screen reveal">
+    <h2 class="script big" id="typed"></h2>
+    <div class="num21" title="21">21</div>
+    <div class="cake" aria-label="Birthday cake">
+      <div class="candles" id="candles"></div>
+      <div class="tier t1"></div><div class="tier t2"></div><div class="plate"></div>
+    </div>
+    <p class="line">Today is your day, so enjoy every moment of it. ✨</p>
+  </section>
+
+  <!-- SECTION 3: MESSAGE -->
+  <section class="screen">
+    <article class="card glass msg">
+      <h3 class="script">For you, Ronabel 💌</h3>
+      <p>"HI Ronabel, happy 21st birthday! 🎉 yahay birthday niya mang libre gyud ka naho ba kay wamay klase ron HAHAHAH bitaw Enjoy your day and I hope you're genuinely happy today because you deserve it. Stay Pretty, Stay kind and Stay naho charr joke HAHAHA btaw take care of yourself wherever you go, especially while you continue with your studies. Khibaw ko nga naay mga times nga lisud na kaayu or kapoy samut kay 4th yr naka but always remember na that you're capable of achieving the things you dream of. Keep believing in yourself, keep working hard maskin mo reklamo ka sahay naho sauna nga kapoy tuon or unsa ba bsta don't give up mao nana HAHAH. I hope this new chapter of your life brings you more happiness, good memories, opportunities and success. grabi lugwa mn ahung pagka english ani HAHAHA bitaw mao ratu basin niyag kiligon kas message naho. Enjoy your 21st! 🥳🎂 Stay safe always, take care and keep pursuing your dreams."</p>
+    </article>
+    <div class="curious">
+      <button id="curiousBtn" class="btn ghost">Click this if you're curious 👀💗</button>
+      <p id="curiousMsg" class="pop-text">Okay, curious ka talaga HAHAHA 😭💗</p>
+    </div>
+  </section>
+
+  <!-- SECTION 4: MINI SURPRISE -->
+  <section class="screen">
+    <article class="card glass center">
+      <h3 class="script">One more thing... 👀</h3>
+      <button id="moreBtn" class="btn">Click me 💗</button>
+      <div id="moreMsg" class="popup">
+        <p>Since 21 naka...</p><p>murag bawal na magpaka-baby 😭😂</p>
+        <p><b>HAHAHAHA joke ra!</b></p><p>Enjoy your day, Ronabel! 💗🎂</p>
+      </div>
+    </article>
+  </section>
+
+  <!-- SECTION 5: FINAL WISH -->
+  <section class="screen final">
+    <h2 class="script big">Happy 21st Birthday, Ronabel! 💗</h2>
+    <p class="line">May this year bring you closer to the person you dream of becoming.</p>
+    <p class="line">Keep going. Keep believing. Keep smiling. ✨</p>
+  </section>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.9.3/dist/confetti.browser.min.js"></script>
+<script>// ===== Ronabel's 21st — behavior =====
+const $ = id => document.getElementById(id);
+const pinks = ['#FF69B4','#FF85C1','#FFB6D9','#FFC0CB','#FFFFFF','#c77dff','#ffd54f'];
+
+// Floating hearts & sparkles (gentle: one every 900ms)
+function floater(){
+  const el = document.createElement('span');
+  el.className = 'fl';
+  el.textContent = ['💗','💕','🩷','✨','💖'][Math.floor(Math.random()*5)];
+  el.style.left = Math.random()*100 + 'vw';
+  el.style.fontSize = (12 + Math.random()*18) + 'px';
+  el.style.animationDuration = (8 + Math.random()*8) + 's';
+  $('hearts').appendChild(el);
+  setTimeout(() => el.remove(), 17000);
+}
+setInterval(floater, 900);
+
+// Heart burst on every button click
+document.addEventListener('click', e => {
+  if (!e.target.closest('button')) return;
+  for (let i = 0; i < 8; i++) {
+    const b = document.createElement('span');
+    b.className = 'burst'; b.textContent = '💗';
+    b.style.left = e.clientX + 'px'; b.style.top = e.clientY + 'px';
+    const a = Math.random()*Math.PI*2, d = 40 + Math.random()*50;
+    b.style.setProperty('--x', Math.cos(a)*d + 'px');
+    b.style.setProperty('--y', Math.sin(a)*d + 'px');
+    document.body.appendChild(b); setTimeout(() => b.remove(), 800);
+  }
+});
+
+// Confetti (safe if CDN is blocked)
+function party(){
+  if (typeof confetti !== 'function') return;
+  const o = {colors: pinks, spread: 80, ticks: 220};
+  confetti({...o, particleCount: 120, origin: {x:.5, y:.6}});
+  setTimeout(() => confetti({...o, particleCount: 60, angle: 60, origin: {x:0, y:.7}}), 300);
+  setTimeout(() => confetti({...o, particleCount: 60, angle: 120, origin: {x:1, y:.7}}), 500);
+}
+
+// 21 candles
+for (let i = 0; i < 21; i++) $('candles').appendChild(Object.assign(document.createElement('div'), {className:'candle'}));
+
+// Typing effect
+function typeText(el, text, speed = 70){
+  el.textContent = ''; let i = 0;
+  const t = setInterval(() => { el.textContent += text[i++]; if (i >= text.length) clearInterval(t); }, speed);
+}
+
+// Open the gift
+let opened = false;
+function openGift(){
+  if (opened) return; opened = true;
+  $('gift').classList.add('open');
+  party();
+  setTimeout(() => {
+    $('intro').classList.add('hidden');
+    $('main').classList.remove('hidden');
+    window.scrollTo(0, 0);
+    typeText($('typed'), 'Happy 21st Birthday, Ronabel! 🎂💗');
+    document.querySelectorAll('.card, .final > *').forEach(el => el.classList.add('fade'));
+    observer.observe && document.querySelectorAll('.fade').forEach(el => observer.observe(el));
+    party();
+  }, 1100);
+}
+$('openBtn').onclick = openGift;
+$('gift').onclick = openGift;
+
+// Fade in on scroll
+const observer = new IntersectionObserver(es => es.forEach(e => {
+  if (e.isIntersecting) { e.target.classList.add('in'); observer.unobserve(e.target); }
+}), {threshold: .2});
+
+// Curious + mini surprise buttons
+$('curiousBtn').onclick = () => $('curiousMsg').classList.add('show');
+$('moreBtn').onclick = () => { $('moreMsg').classList.add('show'); $('moreBtn').style.display = 'none'; party(); };
+
+</script>
+</body>
+</html>
